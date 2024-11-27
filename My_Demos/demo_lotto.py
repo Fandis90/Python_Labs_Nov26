@@ -5,15 +5,19 @@
 
 import random
 
-lotto = []
-
+"""lotto = []
 while len(lotto) < 6:
     num = random.randint(1, 50)
     if num not in lotto:
         lotto.append(num)
     else:
-        print("Duplicate number =", num)
-    
+        print("Duplicate number =", num)"""
 
 
-print("Lotterny numbers: ", lotto)
+lotto = set() #pythonic solution    
+
+while len(lotto) < 6:
+    num = random.randint(1, 50)
+    lotto.add(num)
+
+print("Lotterny numbers: ", sorted(lotto))
