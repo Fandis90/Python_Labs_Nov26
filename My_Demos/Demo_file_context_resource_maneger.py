@@ -20,7 +20,7 @@ movies = {
 with open(r"C:\Project\Python_Labs_Nov26\My_Demos\movies.txt", mode="wt") as fh_out:
     # ITERATE through movies dictionary and WRITE movie info to file handle
     for name in movies.keys(): #names are keys
-        print(f"{name}: {movies[name]}", end="\n")
+        print(f"{name}: {movies[name]}", end="\n", file=fh_out)
         print(f"{name}: {movies[name]}", end="\n", file=fh_out)
         # End of Block, fh_out is closed and deleted automatically.
 
