@@ -111,3 +111,17 @@ sorted(movies, key=len, reverse=True)
 ['Black Hawk Down', 'Trainspotting', 'Harry Potter', 'Dark Knight', 'Django']
 movies.pop() # will remove the last entry from the list (if adding index value, will remove specified)
 """
+
+
+#======================Regular expressions==============
+
+ # regular expressions = Regex = Pattern Matching > String Matching
+ # ^ means start starts with
+ # $ means ends with
+ # . means single character wild card (single character class), but one character at the time
+ # [abc] Alternative charachter class - specify which char to match
+ # [a-7] Ranges
+ # [^0-9] Not range
+ # * Repetition character class (multi character) 0 or more
+ # ? Match 0 or 1 charachter
+ # + match 1 or more characters
