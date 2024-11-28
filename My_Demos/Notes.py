@@ -125,3 +125,7 @@ movies.pop() # will remove the last entry from the list (if adding index value, 
  # * Repetition character class (multi character) 0 or more
  # ? Match 0 or 1 charachter
  # + match 1 or more characters
+
+
+ # =========================Groupings / Back Referals=========== (Palindromes)
+ # bob, kayak, level, sigis
