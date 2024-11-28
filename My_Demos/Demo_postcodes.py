@@ -21,7 +21,7 @@ for postcode in infile:
 
 
     #qustion 2 solutions
-    m = re.search(r"^[A-Z]{1,2}\d{1,2}[A-Z]?\s\d[A-Z]{2}", postcode)
+    m = re.search(r"^[A-Z]{1,2}\d{1,2}[A-Z]?\s\d[A-Z]{2}", postcode) # ? is 0 or 1
     if m:
         valid += 1
     else:
