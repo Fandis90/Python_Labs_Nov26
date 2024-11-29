@@ -10,9 +10,10 @@
 class Tank:
     # a Class has Attributes/Data + Behaviour/Methods
     def __init__(self, country, model):
+        # Constructor
         self.country = country
         self.model = model
-        self.speed = 0
+        self._speed = 0
         self._direction = 0
         self._location = {'x':0, 'y':0, 'z':0}
         self._shells = 20
@@ -42,3 +43,29 @@ class Tank:
     def take_damage(self, damage):
         self._health -= damage
         return None
+    
+    def __del__(self):
+        #Destructor
+        print("Boom..Boom")
+        return None
+    
+    # And now for SOME special methods...
+    # Example of OPERATOR overloading
+    def __add__(self, other):
+        return self._health + other._health
+    
+    # Getter Method
+    def get_health(self):
+        return self._health
+    
+    # Setter Method
+    def set_health(self, neahealth):
+        self._health = neahealth
+        return None
+    
+    # Wrap ONE variable name interface to the two methods! (getter is always first)
+    tank_health = property(get_health, set_health)
+
+    # Example of DUCK TYPING, our tank can now QUACK like a string
+    def __str__(self):
+        return f"Model = {self.model}, health={self._health}, speed={self._speed}"
